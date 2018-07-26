@@ -1,7 +1,15 @@
 import mongoose from 'mongoose'
 
 export const schema = {
-  
+  username: {
+    type: String,
+    required: true
+  },
+
+  passwordHash: {
+    required: true,
+    type: String
+  }
 }
 
 const userSchema = new mongoose.Schema(schema, {timestamps: true})
