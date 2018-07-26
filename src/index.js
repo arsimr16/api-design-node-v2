@@ -4,6 +4,9 @@ import { createServer } from 'http'
 import app from './server'
 let currentApp = app
 
+app.listen(3000, () => {
+	console.log('http://localhost:3000');
+})
 
 if (module.hot) {
 	module.hot.accept(['./server'], () => {
